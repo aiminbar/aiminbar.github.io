@@ -3,390 +3,386 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ai.minbar | محتوى وتصاميم بلمسة مختلفة</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+:root{
+  --navy:#0D1B3D;
+  --cream:#FFF6E6;
+  --pink:#FFC2CC;
+  --sky:#B7E1FF;
+  --lav:#D6C6FF;
+  --yellow:#FFD97A;
+  --mint:#BFEDE2;
+  --white:#FFFFFF;
+  --soft:#667085;
+  --line:#EAE5DE;
+  --shadow:0 18px 50px rgba(13,27,61,.08);
 }
 
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Tahoma, Arial, sans-serif;
-    background:#fffdfa;
-    color:#0D1B3D;
-    line-height:1.8;
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:#FFFDF9;
+  color:var(--navy);
+  line-height:1.8;
 }
-
-.container{
-    width:min(1180px,94%);
-    margin:auto;
-}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
 
 /* HEADER */
-header{
-    padding:25px 0 15px;
+header{padding:24px 0 14px}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
-
-.header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    direction:ltr;
+.brand{
+  direction:ltr;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
 }
-
-.logo{
-    font-size:40px;
-    font-weight:900;
-    color:#0D1B3D;
-    letter-spacing:-2px;
+.brand-text{
+  font-size:40px;
+  font-weight:900;
+  letter-spacing:-2px;
+  line-height:1;
 }
-
-.logo-line{
-    height:6px;
-    width:100px;
-    background:#B7E1FF;
-    border-radius:20px;
-    margin:2px auto 0;
+.brand-spark{font-size:24px;color:#FFD97A}
+.brand-line{
+  width:92px;
+  height:7px;
+  background:var(--sky);
+  border-radius:99px;
+  margin:9px auto 0;
 }
-
-.home{
-    direction:rtl;
-    border:1px solid #e5e5e5;
-    background:white;
-    padding:12px 22px;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(13,27,61,.07);
-    font-weight:bold;
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-weight:700;
+  font-size:14px;
+}
+.home-pill{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 18px;
+  background:linear-gradient(90deg,#F5F0FF,#EEF7FF);
+  border:1px solid var(--lav);
+  border-radius:18px;
 }
 
 /* HERO */
 .hero{
-    margin-top:15px;
-    background:white;
-    border:1px solid #f0ece8;
-    border-radius:34px;
-    padding:55px;
-    box-shadow:0 12px 35px rgba(13,27,61,.06);
-    display:grid;
-    grid-template-columns:1.25fr .75fr;
-    gap:35px;
-    align-items:center;
+  margin-top:16px;
+  background:#fff;
+  border:1px solid #F0EBE4;
+  border-radius:34px;
+  box-shadow:var(--shadow);
+  padding:44px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:40px;
+  align-items:center;
 }
-
+.hero-content{min-width:0}
 .badge{
-    display:inline-block;
-    background:#f0eaff;
-    color:#0D1B3D;
-    border:1px solid #D6C6FF;
-    padding:8px 18px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:20px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 16px;
+  background:#F4EEFF;
+  border:1px solid var(--lav);
+  border-radius:999px;
+  font-weight:800;
+  margin-bottom:18px;
 }
-
 .hero h1{
-    font-size:52px;
-    margin-bottom:5px;
+  font-size:56px;
+  line-height:1.25;
+  margin:0 0 10px;
+}
+.hero-sub{
+  margin:0;
+  color:#667085;
+  font-size:23px;
+}
+.info-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid #EEE5DD;
+  border-radius:22px;
+  overflow:hidden;
+}
+.info-grid>div{
+  padding:18px 12px;
+  text-align:center;
+  border-left:1px solid #EEE5DD;
+}
+.info-grid>div:last-child{border-left:0}
+.info-icon{
+  width:50px;
+  height:50px;
+  margin:0 auto 8px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+}
+.info-icon svg{width:28px;height:28px}
+.i-book{background:#EAF5FF;color:#3879DB}
+.i-cap{background:#F2EDFF;color:#7B5CE0}
+.i-stack{background:#E9F8F2;color:#309777}
+.info-grid strong{display:block}
+.info-grid small{color:#71798C}
+.hero-mascot{
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 14% 20%, #B7E1FF 0 6px, transparent 7px),
+    radial-gradient(circle at 86% 24%, #FFC2CC 0 6px, transparent 7px),
+    radial-gradient(circle at 20% 80%, #BFEDE2 0 6px, transparent 7px),
+    radial-gradient(circle at 80% 78%, #D6C6FF 0 6px, transparent 7px),
+    linear-gradient(145deg,#FFFDF8,#FFF9F1);
+}
+.official-mascot{
+  width:min(92%,420px);
+  max-height:390px;
+  object-fit:contain;
+  filter:drop-shadow(0 16px 18px rgba(13,27,61,.10));
 }
 
-.subtitle{
-    font-size:23px;
-    color:#626a80;
+/* PRODUCT CARDS */
+.cards{
+  margin:28px 0 24px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
-
-.info{
-    margin-top:30px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    border:1px solid #eee3dc;
-    border-radius:22px;
-    overflow:hidden;
-}
-
-.info div{
-    padding:15px;
-    text-align:center;
-    border-left:1px solid #eee3dc;
-}
-
-.info div:last-child{
-    border-left:0;
-}
-
-.info small{
-    display:block;
-    color:#6b7080;
-}
-
-.welcome{
-    margin-top:25px;
-    font-size:18px;
-}
-
-/* MASCOT PLACE */
-.mascot-box{
-    min-height:390px;
-    border-radius:30px;
-    background:
-        radial-gradient(circle at 20% 25%,#D6C6FF 0 6px,transparent 7px),
-        radial-gradient(circle at 85% 30%,#B7E1FF 0 5px,transparent 6px),
-        radial-gradient(circle at 25% 80%,#BFEDE2 0 5px,transparent 6px),
-        #fffdf9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-}
-
-.mascot-placeholder{
-    width:75%;
-    aspect-ratio:1/1;
-    border:2px dashed #B7E1FF;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#7a84a0;
-    padding:30px;
-}
-
-/* RESOURCE CARDS */
-.resources{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-    margin:30px 0;
-}
-
 .card{
-    min-height:230px;
-    border-radius:28px;
-    padding:30px 20px;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    transition:.25s;
+  min-height:280px;
+  padding:28px 20px;
+  border-radius:28px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:.2s;
 }
-
 .card:hover{
-    transform:translateY(-5px);
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(13,27,61,.08);
 }
-
+.c-blue{background:#F4F9FF;border:1px solid var(--sky)}
+.c-pink{background:#FFF5F7;border:1px solid var(--pink)}
+.c-lav{background:#F8F5FF;border:1px solid var(--lav)}
+.c-mint{background:#F3FBF7;border:1px solid var(--mint)}
 .card-icon{
-    font-size:50px;
-    margin-bottom:10px;
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  background:rgba(255,255,255,.75);
+  display:grid;
+  place-items:center;
+  margin-bottom:16px;
+  box-shadow:0 8px 20px rgba(13,27,61,.05);
 }
-
-.card h3{
-    font-size:21px;
-    margin-bottom:4px;
+.card-icon svg{width:52px;height:52px}
+.card h3{font-size:23px;margin:0 0 4px}
+.card p{margin:0;color:#697087;font-size:14px}
+.arrow{
+  width:46px;
+  height:46px;
+  margin-top:18px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  font-weight:900;
 }
+.a-blue{background:#DDEEFF;color:#2775D8}
+.a-pink{background:#FFE0E7;color:#E54B78}
+.a-lav{background:#E9DEFF;color:#7049D9}
+.a-mint{background:#DCF5EC;color:#218D6E}
 
-.card p{
-    color:#606a80;
+/* LESSON FEATURE */
+.lesson-feature{
+  margin:12px 0 28px;
+  background:#F7FBFF;
+  border:1px solid #CFE6F8;
+  border-radius:30px;
+  padding:22px;
+  display:grid;
+  grid-template-columns:1fr 1.2fr .72fr;
+  gap:24px;
+  align-items:center;
 }
-
-.card button{
-    margin-top:18px;
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    font-size:22px;
-    cursor:pointer;
+.preview{
+  min-height:230px;
+  border-radius:24px;
+  background:#0D1B3D;
+  padding:12px;
 }
-
-.blue{
-    background:#f2f8ff;
-    border:1px solid #B7E1FF;
+.preview-inner{
+  height:100%;
+  min-height:206px;
+  border-radius:16px;
+  background:linear-gradient(145deg,#F7FBFF,#FFF7EA);
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
-
-.pink{
-    background:#fff5f6;
-    border:1px solid #FFC2CC;
+.preview-inner img{
+  max-width:75%;
+  max-height:190px;
+  object-fit:contain;
 }
-
-.purple{
-    background:#f8f5ff;
-    border:1px solid #D6C6FF;
+.play{
+  position:absolute;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#2D6CDF;
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:26px;
 }
-
-.green{
-    background:#f4fbf7;
-    border:1px solid #BFEDE2;
+.lesson-copy h2{font-size:31px;margin:0}
+.lesson-copy h3{font-size:22px;margin:0 0 8px}
+.lesson-copy p{color:#667085;margin:0 0 18px}
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:#2E6BE6;
+  color:#fff;
+  padding:13px 25px;
+  border-radius:16px;
+  font-weight:900;
 }
-
-/* OFFLINE */
-.offline{
-    background:#fff9e9;
-    border:1px solid #FFD97A;
-    border-radius:30px;
-    padding:35px 45px;
-    margin:25px 0;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
+.offline-side{
+  border-right:1px solid #DDEAF4;
+  padding-right:24px;
+  text-align:center;
 }
-
-.offline h2{
-    font-size:29px;
+.offline-icon{
+  width:78px;height:78px;
+  margin:auto;
+  color:#2E6BE6;
 }
-
-.offline p{
-    color:#5f6678;
-}
-
-.download{
-    border:0;
-    background:#FFD97A;
-    color:#0D1B3D;
-    padding:15px 35px;
-    border-radius:14px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
+.offline-side h3{font-size:23px;margin:5px 0}
+.offline-side p{color:#667085;font-size:14px}
+.outline-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:2px solid #2E6BE6;
+  color:#2E6BE6;
+  background:#fff;
+  padding:9px 20px;
+  border-radius:15px;
+  font-weight:900;
 }
 
 /* SOCIAL */
-.social{
-    background:#f6fbff;
-    border:1px solid #B7E1FF;
-    border-radius:25px;
-    padding:25px;
-    text-align:center;
-    margin:25px 0;
+.social-section{
+  text-align:center;
+  margin:20px 0 26px;
 }
-
-.social h2{
-    margin-bottom:18px;
+.social-section h2{
+  margin:0;
+  font-size:26px;
 }
-
-.social-links{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    flex-wrap:wrap;
-    direction:ltr;
+.social-section p{
+  margin:0 0 16px;
+  color:#667085;
 }
-
-.social-item{
-    padding:8px 14px;
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
 }
-
-.social-item strong{
-    display:block;
+.social-card{
+  background:#fff;
+  border:1px solid #ECE7E1;
+  border-radius:22px;
+  padding:18px 12px;
+  box-shadow:0 7px 18px rgba(13,27,61,.04);
 }
-
-.social-item span{
-    color:#687087;
-    font-size:14px;
+.social-logo{
+  width:58px;
+  height:58px;
+  margin:0 auto 10px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:24px;
+  color:#fff;
 }
-
-/* NOTES */
-.notes{
-    background:#f6fbff;
-    border:1px solid #d9edff;
-    border-radius:25px;
-    padding:25px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    text-align:center;
-    gap:15px;
-    margin-bottom:25px;
-}
-
-.note{
-    padding:10px;
-}
-
-.note-icon{
-    font-size:30px;
-}
+.social-logo svg{width:32px;height:32px}
+.tiktok{background:#111}
+.youtube{background:#FF0000}
+.snapchat{background:#FFFC00;color:#111;border:1px solid #111}
+.xsocial{background:#111}
+.whatsapp{background:#25D366}
+.social-card strong{display:block;font-size:16px}
+.social-card small{display:block;color:#667085}
 
 /* FOOTER */
 footer{
-    margin-top:30px;
-    background:#eaf5ff;
-    padding:40px 20px;
-    text-align:center;
-    border-radius:50% 50% 0 0 / 20px 20px 0 0;
+  margin-top:25px;
+  padding:42px 15px 28px;
+  text-align:center;
+  background:linear-gradient(180deg,#EEF7FF,#DDEEFF);
+  clip-path:ellipse(100% 75% at 50% 76%);
 }
-
-.footer-logo{
-    font-size:30px;
-    font-weight:900;
+.footer-brand{
+  direction:ltr;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:29px;
+  font-weight:900;
 }
-
-footer p{
-    color:#47536e;
-}
+footer p{margin:4px 0;color:#53627A}
 
 /* MOBILE */
-@media(max-width:800px){
-
-    .hero{
-        grid-template-columns:1fr;
-        padding:30px 22px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .mascot-box{
-        min-height:300px;
-    }
-
-    .resources{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .offline{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .notes{
-        grid-template-columns:1fr 1fr;
-    }
-
+@media(max-width:920px){
+  .nav{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-mascot{order:-1}
+  .cards{grid-template-columns:1fr 1fr}
+  .lesson-feature{grid-template-columns:1fr}
+  .offline-side{border-right:0;border-top:1px solid #DDEAF4;padding:20px 0 0}
+  .social-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-@media(max-width:500px){
-
-    .logo{
-        font-size:29px;
-    }
-
-    .resources{
-        grid-template-columns:1fr;
-    }
-
-    .info{
-        grid-template-columns:1fr;
-    }
-
-    .info div{
-        border-left:0;
-        border-bottom:1px solid #eee3dc;
-    }
-
-    .notes{
-        grid-template-columns:1fr;
-    }
-}.official-mascot{
-    width:90%;
-    max-width:380px;
-    height:auto;
-    object-fit:contain;
-    display:block;
+@media(max-width:560px){
+  .brand-text{font-size:31px}
+  .hero{padding:24px}
+  .hero h1{font-size:39px}
+  .hero-sub{font-size:18px}
+  .info-grid{grid-template-columns:1fr}
+  .info-grid>div{border-left:0;border-bottom:1px solid #EEE5DD}
+  .cards{grid-template-columns:1fr}
+  .social-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -394,197 +390,211 @@ footer p{
 <body>
 
 <header>
-<div class="container header-inner">
+  <div class="container header">
+    <div class="brand">
+      <div>
+        <div class="brand-text">ai.minbar</div>
+        <div class="brand-line"></div>
+      </div>
+      <div class="brand-spark">✦</div>
+    </div>
 
-<div>
-    <div class="logo">ai.minbar ✨</div>
-    <div class="logo-line"></div>
-</div>
-
-<div class="home">⌂ الرئيسية</div>
-
-</div>
+    <nav class="nav">
+      <a class="home-pill" href="#">⌂ الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#lesson">كيف أعمل؟</a>
+      <a href="#">من نحن</a>
+      <a href="#social">تواصل معنا</a>
+    </nav>
+  </div>
 </header>
-
 
 <main class="container">
 
-<section class="hero">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">✦ منبر الإبداع من ai.minbar</div>
 
-<div>
+      <h1>محتوى وتصاميم<br>بلمسة مختلفة</h1>
+      <p class="hero-sub">نحو تجربة تعليمية أمتع وأسهل ✨</p>
 
-<span class="badge">☆ منتج من ai.minbar</span>
+      <div class="info-grid">
+        <div>
+          <div class="info-icon i-book">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22V5.5Z"/>
+              <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22V5.5Z"/>
+            </svg>
+          </div>
+          <strong>المادة</strong>
+          <small>لكل مادة دراسية</small>
+        </div>
 
-<h1>درس صلة الرحم</h1>
+        <div>
+          <div class="info-icon i-cap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c3 2 9 2 12 0v-4.5"/>
+            </svg>
+          </div>
+          <strong>الصف</strong>
+          <small>من الابتدائي حتى الثانوي</small>
+        </div>
 
-<p class="subtitle">
-لغتي الجميلة | الصف الثاني الابتدائي
-</p>
+        <div>
+          <div class="info-icon i-stack">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/>
+            </svg>
+          </div>
+          <strong>نوع المنتج</strong>
+          <small>دروس تفاعلية وتصاميم وملفات تعليمية</small>
+        </div>
+      </div>
+    </div>
 
-<div class="info">
+    <div class="hero-mascot">
+      <img src="mascot.png" alt="شخصية ai.minbar" class="official-mascot">
+    </div>
+  </section>
 
-<div>
-<strong>المادة</strong>
-<small>لغتي</small>
-</div>
+  <section class="cards" id="products">
 
-<div>
-<strong>الصف</strong>
-<small>الثاني الابتدائي</small>
-</div>
+    <a class="card c-blue" href="https://aiminbar.github.io/silat-alrahim/">
+      <div class="card-icon" style="color:#2E6BE6">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M7 7h10a4 4 0 0 1 3.8 5.2l-1.3 4.2a2.5 2.5 0 0 1-4.2 1l-1.1-1.2H9.8l-1.1 1.2a2.5 2.5 0 0 1-4.2-1l-1.3-4.2A4 4 0 0 1 7 7Z"/>
+          <path d="M8 10v4M6 12h4"/><circle cx="16.5" cy="11" r=".8" fill="currentColor"/><circle cx="18.5" cy="13" r=".8" fill="currentColor"/>
+        </svg>
+      </div>
+      <h3>الدرس التفاعلي</h3>
+      <p>نشاط + عرض + لعبة تعليمية ممتعة</p>
+      <span class="arrow a-blue">←</span>
+    </a>
 
-<div>
-<strong>نوع المنتج</strong>
-<small>درس تفاعلي متكامل</small>
-</div>
+    <div class="card c-pink">
+      <div class="card-icon" style="color:#E85C86">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 12h6M9 16h6"/>
+        </svg>
+      </div>
+      <h3>أوراق العمل</h3>
+      <p>أوراق عمل متنوعة جاهزة للطباعة</p>
+      <span class="arrow a-pink">←</span>
+    </div>
 
-</div>
+    <div class="card c-lav">
+      <div class="card-icon" style="color:#7657D8">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="5" y="5" width="11" height="14" rx="2"/><path d="M9 3h8a2 2 0 0 1 2 2v12"/>
+          <path d="m10.5 9 1 2 2.2.3-1.6 1.6.4 2.1-2-1-2 1 .4-2.1-1.6-1.6 2.2-.3 1-2Z"/>
+        </svg>
+      </div>
+      <h3>البطاقات التعليمية</h3>
+      <p>بطاقات ملونة جاهزة للطباعة والاستخدام</p>
+      <span class="arrow a-lav">←</span>
+    </div>
 
-<p class="welcome">
-مرحبًا بك! تم إعداد هذا المنتج بعناية ولمسة مختلفة
-<br>
-لجعل التعلم ممتعًا وفعّالًا ✨
-</p>
+    <div class="card c-mint">
+      <div class="card-icon" style="color:#299879">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M4 7h6l2 2h8v11H4z"/><path d="M4 7V5h6l2 2"/>
+        </svg>
+      </div>
+      <h3>ملفات إضافية</h3>
+      <p>أنشطة وتمارين متنوعة تدعم التعلم</p>
+      <span class="arrow a-mint">←</span>
+    </div>
 
-</div>
+  </section>
 
+  <section class="lesson-feature" id="lesson">
 
-<div class="mascot-box">
+    <div class="preview">
+      <div class="preview-inner">
+        <img src="mascot.png" alt="">
+        <div class="play">▶</div>
+      </div>
+    </div>
 
-<img src="mascot.png" alt="شخصية ai.minbar" class="official-mascot">
+    <div class="lesson-copy">
+      <h2>الدرس التفاعلي</h2>
+      <h3>مغامرة صلة الرحم</h3>
+      <p>درس تفاعلي متكامل يتضمن عرضًا تعليميًا، مراحل تفاعلية، وأنشطة ولعبة تعليمية ممتعة.</p>
+      <a class="primary-btn" href="https://aiminbar.github.io/silat-alrahim/">ابدئي الدرس الآن 🎮</a>
+    </div>
 
-</div>
+    <div class="offline-side">
+      <svg class="offline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M7 18h10a4 4 0 0 0 .7-7.9A6 6 0 0 0 6.2 8.6 4.8 4.8 0 0 0 7 18Z"/>
+        <path d="M12 10v8"/><path d="m9 15 3 3 3-3"/>
+      </svg>
+      <h3>نسخة بدون إنترنت</h3>
+      <p>حمّلي الدرس لتشغيله على جهازك بدون اتصال بالإنترنت.</p>
+      <a class="outline-btn" href="https://github.com/aiminbar/silat-alrahim/archive/refs/heads/main.zip">تحميل النسخة ↓</a>
+    </div>
 
-</section>
+  </section>
 
+  <section class="social-section" id="social">
+    <h2>تابعنا في منصاتنا ✨</h2>
+    <p>كل جديد ومفيد بانتظارك</p>
 
-<section class="resources">
+    <div class="social-grid">
 
-<div class="card blue">
-<div class="card-icon">🎮</div>
-<h3>ابدئي الدرس التفاعلي</h3>
-<p>نشاط + عرض + لعبة</p>
-<button>‹</button>
-</div>
+      <a class="social-card" href="https://www.tiktok.com/@ai.minbar" target="_blank">
+        <div class="social-logo tiktok">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.5 3c.6 2.6 2.1 4.1 4.5 4.6v3.2c-1.7-.1-3.2-.6-4.5-1.5v5.5a6 6 0 1 1-5.2-5.9v3.3a2.8 2.8 0 1 0 2 2.7V3h3.2Z"/>
+          </svg>
+        </div>
+        <strong>TikTok</strong>
+        <small>@ai.minbar</small>
+      </a>
 
+      <a class="social-card" href="https://www.youtube.com/@ai.minbar" target="_blank">
+        <div class="social-logo youtube">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 7.2a3 3 0 0 0-2.1-2.1C17 4.6 12 4.6 12 4.6s-5 0-6.9.5A3 3 0 0 0 3 7.2 31 31 0 0 0 2.6 12c0 1.6.1 3.2.4 4.8a3 3 0 0 0 2.1 2.1c1.9.5 6.9.5 6.9.5s5 0 6.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.8 31 31 0 0 0-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/>
+          </svg>
+        </div>
+        <strong>YouTube</strong>
+        <small>@ai.minbar</small>
+      </a>
 
-<div class="card pink">
-<div class="card-icon">📄</div>
-<h3>أوراق العمل</h3>
-<p>تحميل وطباعة</p>
-<button>‹</button>
-</div>
+      <a class="social-card" href="https://www.snapchat.com/add/ai.minbar" target="_blank">
+        <div class="social-logo snapchat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8">
+            <path d="M12 3c-3 0-4.8 2.2-4.8 5.2 0 .6.1 1.2.1 1.6-.5.3-1.3.4-2 .6-.7.2-.8 1-.1 1.4 1 .5 1.9 1 2.5 1.9-.2.5-.8 1.3-1.8 1.7-.5.2-.4.9.2 1.1.8.3 1.7.3 2.4.5.6.2.7 1.2 1.5 1.2.6 0 1.2-.4 2-.4s1.4.4 2 .4c.8 0 .9-1 1.5-1.2.7-.2 1.6-.2 2.4-.5.6-.2.7-.9.2-1.1-1-.4-1.6-1.2-1.8-1.7.6-.9 1.5-1.4 2.5-1.9.7-.4.6-1.2-.1-1.4-.7-.2-1.5-.3-2-.6 0-.4.1-1 .1-1.6C16.8 5.2 15 3 12 3Z"/>
+          </svg>
+        </div>
+        <strong>Snapchat</strong>
+        <small>@ai.minbar</small>
+      </a>
 
+      <a class="social-card" href="https://x.com/aiminbar" target="_blank">
+        <div class="social-logo xsocial">X</div>
+        <strong>X (Twitter)</strong>
+        <small>aiminbar</small>
+      </a>
 
-<div class="card purple">
-<div class="card-icon">🃏</div>
-<h3>البطاقات التعليمية</h3>
-<p>تحميل وطباعة</p>
-<button>‹</button>
-</div>
+      <a class="social-card" href="https://wa.me/966538101173" target="_blank">
+        <div class="social-logo whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.3-1.2A11 11 0 1 0 20.5 3.5ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.7.7-3-.2-.3A8 8 0 1 1 12 20Zm4.5-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.7-2.4-1.5-3.3-2.6-.2-.3-.5-.7-.7-1-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1.2 1.8-1.1 2.9 0 1.7 1.2 3.4 1.4 3.6 1.4 2.1 3.3 3.8 5.6 4.6.8.3 1.5.5 2 .6.8.2 1.6.1 2.2-.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.5-.4Z"/>
+          </svg>
+        </div>
+        <strong>WhatsApp</strong>
+        <small>0538101173</small>
+      </a>
 
-
-<div class="card green">
-<div class="card-icon">🖨️</div>
-<h3>ملفات إضافية</h3>
-<p>أنشطة وتمارين</p>
-<button>‹</button>
-</div>
-
-</section>
-
-
-<section class="offline">
-
-<div>
-<h2>تحميل نسخة بدون إنترنت</h2>
-
-<p>
-حمّلي النسخة الكاملة على جهازك لتشغيلها بدون إنترنت في أي وقت،
-مثالية للاستخدام في المدرسة أو أثناء التنقل.
-</p>
-</div>
-
-<button class="download">
-↓ تحميل النسخة الآن
-</button>
-
-</section>
-
-
-<section class="social">
-
-<h2>✦ تواصلي معنا ✦</h2>
-
-<div class="social-links">
-
-<div class="social-item">
-<strong>TikTok</strong>
-<span>@ai.minbar</span>
-</div>
-
-<div class="social-item">
-<strong>YouTube</strong>
-<span>@ai.minbar</span>
-</div>
-
-<div class="social-item">
-<strong>Snapchat</strong>
-<span>@ai.minbar</span>
-</div>
-
-<div class="social-item">
-<strong>X</strong>
-<span>aiminbar</span>
-</div>
-
-<div class="social-item">
-<strong>WhatsApp</strong>
-<span>0538101173</span>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="notes">
-
-<div class="note">
-<div class="note-icon">🌐</div>
-يفتح الدرس التفاعلي بأفضل أداء على متصفح Chrome
-</div>
-
-<div class="note">
-<div class="note-icon">↻</div>
-يمكنك إعادة تشغيل الدرس التفاعلي في أي وقت
-</div>
-
-<div class="note">
-<div class="note-icon">🛡️</div>
-لا تشاركي الرابط مع الآخرين للحفاظ على حقوق الاستخدام
-</div>
-
-<div class="note">
-<div class="note-icon">📄</div>
-جميع الملفات جاهزة للطباعة والاستخدام
-</div>
-
-</section>
+    </div>
+  </section>
 
 </main>
 
-
 <footer>
-
-<div class="footer-logo">
-ai.minbar ♡
-</div>
-
-<p>
-محتوى وتصاميم بلمسة مختلفة ✨
-</p>
-
+  <div class="footer-brand">ai.minbar ✨</div>
+  <p>محتوى وتصاميم بلمسة مختلفة</p>
 </footer>
 
 </body>
