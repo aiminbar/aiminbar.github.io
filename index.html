@@ -422,6 +422,80 @@ header{
 .nav a{
   text-decoration: none;
   white-space: nowrap;
+/* كيف أطلب؟ */
+
+.how-to-order{
+  margin:42px 0;
+  padding:36px 28px;
+  background:#ffffff;
+  border:1px solid #EEE8E1;
+  border-radius:30px;
+  text-align:center;
+}
+
+.order-title span{
+  display:inline-block;
+  margin-bottom:8px;
+  padding:7px 14px;
+  background:#F4EFFF;
+  border-radius:20px;
+  color:#6F5BD3;
+  font-size:14px;
+  font-weight:700;
+}
+
+.order-title h2{
+  margin:0;
+  color:#0D1B3D;
+  font-size:34px;
+}
+
+.order-title p{
+  margin:8px 0 26px;
+  color:#667085;
+  font-size:15px;
+}
+  .order-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.order-step{
+  background:#FAFAFF;
+  border:1px solid #EEE8FF;
+  border-radius:22px;
+  padding:24px 18px;
+  text-align:center;
+}
+
+.step-number{
+  width:46px;
+  height:46px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  background:#F1ECFF;
+  color:#6F5BD3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  font-weight:800;
+}
+
+.order-step h3{
+  margin:0 0 8px;
+  color:#0D1B3D;
+  font-size:18px;
+}
+
+.order-step p{
+  margin:0;
+  color:#667085;
+  font-size:14px;
+  line-height:1.8;
 }
 </style>
 </head>
@@ -497,7 +571,34 @@ header{
     </a>
 
   </section>
+<section class="how-to-order" id="how-to-order">
+  <div class="order-title">
+  <span>✨ الطلب بسيط</span>
+  <h2>كيف أطلب؟</h2>
+  <p>اختاري المنتج المناسب، وأرسلي لنا تفاصيل طلبك، والباقي علينا ♡</p>
+</div>
+  <div class="order-steps">
 
+  <div class="order-step">
+    <div class="step-number">1</div>
+    <h3>اختاري المنتج</h3>
+    <p>اختاري الخدمة أو المنتج المناسب لك</p>
+  </div>
+
+  <div class="order-step">
+    <div class="step-number">2</div>
+    <h3>أرسلي التفاصيل</h3>
+    <p>أرسلي لنا تفاصيل طلبك عبر واتساب</p>
+  </div>
+
+  <div class="order-step">
+    <div class="step-number">3</div>
+    <h3>استلمي طلبك</h3>
+    <p>نجهّز طلبك ونرسله لك جاهزًا للاستخدام ✨</p>
+  </div>
+
+</div>
+</section>
   <section class="lesson-feature" id="lesson">
 
     <div class="preview">
